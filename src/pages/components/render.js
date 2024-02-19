@@ -133,7 +133,6 @@ const Render = ({ id, field, formField, methods }) => {
       );
     case '107':
       const [imageUrl, setImageUrl] = useState();
-      const { imageBase64, handleImageInputChange } = useImageInput();
 
       const handleFileUpload = async (event) => {
         const file = event.target.files[0];
@@ -153,7 +152,6 @@ const Render = ({ id, field, formField, methods }) => {
           console.error('Error converting to base64:', error);
         }
       };
-
       return (
         formField,
         methods,
@@ -169,6 +167,8 @@ const Render = ({ id, field, formField, methods }) => {
           </Box>
         )
       );
+
+
     case '110':
       const editor = useRef(null);
       const [content, setContent] = useState('');
